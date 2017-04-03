@@ -1,5 +1,5 @@
 % Intro Options
-\ProvidesClass{deedy-resume-openfont}[2014/04/30 CV class]
+\ProvidesClass{resume}[2017/04/03 CV class]
 \NeedsTeXFormat{LaTeX2e}
 \DeclareOption{print}{\def\@cv@print{}}
 \DeclareOption*{%
@@ -78,7 +78,63 @@ Last Updated on \today
 \newcommand{\location}[1]{
 \color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
 
+% Facts
+\usepackage{etoolbox}
+\newcounter{factcnt}
+\newcommand\entrylist{}
+
+\newcommand\setentry[2]{%
+  \csdef{entry#1}{#2}
+}
+
+\newcommand\addentry[1]{%
+  \stepcounter{factcnt}%
+  \csdef{entry\thefactcnt}{#1}
+}
+
+\newcommand\getentry[1]{%
+  \csuse{entry#1}
+}
+
+% Location command
+\newcommand{\fact}[2]{
+  \addentry{
+    \subsection{#1}
+    #2
+    \sectionsep
+  }
+}
+
+\newcounter{colnum}
+\newcommand\makefacts[0]{
+  \setcounter{colnum}{0}
+  \whileboolexpr{
+    test {
+      \ifnumcomp{\value{colnum}}{<}{\thefactcnt}
+    }
+  }{
+    \stepcounter{colnum}
+    \getentry{\thecolnum}
+  }
+}
+
 % Bullet Lists with fewer gaps command
 \newenvironment{tightemize}{
-\vspace{-\topsep}\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt}
-{\end{itemize}\vspace{-\topsep}}
+  \vspace{-\topsep}
+  \begin{itemize}
+  \itemsep1pt
+  \parskip0pt
+  \parsep0pt
+}{
+  \end{itemize}
+  \vspace{-\topsep}
+}
+
+\AtBeginDocument{
+  \noindent
+  \begin{minipage}[t]{0.33\textwidth}
+}
+
+\AtEndDocument{
+  \end{minipage}
+}

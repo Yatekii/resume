@@ -3,21 +3,15 @@
 % LaTeX Template
 % Version 1.2 (16/9/2014)
 %
-% Original author:
-% Debarghya Das (http://debarghyadas.com)
-%
-% Original repository:
-% https://github.com/deedydas/Deedy-Resume
-%
 % Author:
 % Noah Huesser (yatekii@yatekii.ch)
-% Version 1.0 (02-05-2016)
+% Version 1.1 (2016-04-03)
 %
 % IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[]{deedy-resume-openfont}
+\documentclass[]{resume}
 \usepackage{fancyhdr}
 \usepackage[export]{adjustbox}
 
@@ -25,28 +19,6 @@
 \fancyhf{}
 
 \begin{document}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     LAST UPDATED DATE
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\lastupdated
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     TITLE NAME
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\namesection{Noah}{Hüsser}{}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     COLUMN ONE
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent
-\begin{minipage}[t]{0.33\textwidth}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     PROFILE
@@ -58,24 +30,26 @@
 \sectionsep
 %\includegraphics[valign=t, width=0.5\textwidth,left]{images/portrait_noah}
 
-\subsection{Basics}
-Nationality: CH\\
-Date of Birth: 12th January 1991
-\sectionsep
+\fact{Basics}{
+    Nationality: CH\\
+    Date of Birth: 12th January 1991
+}
 
-\subsection{Contact}
-yatekii@yatekii.ch\\
-+41 79 960 7130\\
-\sectionsep
-Eggenstrasse 3\\
-5616 Meisterschwanden\\
-Switzerland
-\sectionsep
+\fact{Contact}{
+    yatekii@yatekii.ch\\
+    +41 79 960 7130\\
+    \sectionsep
+    Eggenstrasse 3\\
+    5616 Meisterschwanden\\
+    Switzerland
+}
 
-\subsection{Activities}
-Ju Jitsu, Programming,\\
-Electronics, Reading
-\sectionsep
+\fact{Activities}{
+    Ju Jitsu, Programming,\\
+    Electronics, Reading
+}
+
+\makefacts
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     SKILLS
@@ -229,5 +203,5 @@ A system to manage access on devices such as the door to our backyard or a beer 
 %     PERSONAL ACHIEVEMENTS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\end{minipage}
-\end{document}  \documentclass[]{article}
+
+\end{document}
