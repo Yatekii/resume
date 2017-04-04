@@ -11,12 +11,8 @@
 \usepackage[export]{adjustbox}
 
 % Package Imports
-\usepackage[hmargin=1.25cm, vmargin=0.75cm]{geometry}
+\usepackage[hmargin=0.75cm, vmargin=0.75cm]{geometry}
 \usepackage[hidelinks]{hyperref}
-
-% Publications
-\usepackage{cite}
-\renewcommand\refname{\vskip -1.5cm}
 
 % Color definitions
 \usepackage[usenames,dvipsnames]{xcolor}
@@ -24,6 +20,7 @@
 \definecolor{primary}{HTML}{2b2b2b}
 \definecolor{headings}{HTML}{6A6A6A}
 \definecolor{subheadings}{HTML}{333333}
+\definecolor{sidecolor}{HTML}{E7E7E7}
 
 % Set main fonts
 \usepackage{fontspec}
@@ -34,12 +31,6 @@
 \usepackage[absolute]{textpos}
 \usepackage[ngerman]{babel}
 \usepackage[UKenglish,printdayoff,iso]{isodate}
-\setlength{\TPHorizModule}{1mm}
-\setlength{\TPVertModule}{1mm}
-\newcommand{\lastupdated}{\begin{textblock}{60}(155,5)
-\color{date}\fontspec[Path = fonts/raleway/]{Raleway-ExtraLight}\fontsize{8pt}{10pt}\selectfont
-Last Updated on \today
-\end{textblock}}
 
 % Fix linebreaks in section headings
 \usepackage{polyglossia}
@@ -55,22 +46,21 @@ Last Updated on \today
 
 % Location command
 \newcommand{\meta}[4]{
-  #1#2#3#4
   % Description  
   \color{subheadings}
   \raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}
   \fontsize{11pt}{13pt}\selectfont
-  #1 to #2
+  #1
   % Date
   \color{headings}
   \fontspec[Path = fonts/raleway/]{Raleway-Medium}
   \fontsize{10pt}{12pt}\selectfont
-  #3 in
+  #2 to #3 in
   % Location
   \color{subheadings}
   \fontspec[Path = fonts/raleway/]{Raleway-Medium}
   \fontsize{10pt}{12pt}\selectfont
-  #4
+  #4\\
   \normalfont
 }
 
@@ -78,6 +68,8 @@ Last Updated on \today
 \newcommand{\describe}[1]{
   \textit{#1}
 }
+
+\RequirePackage{tikz}
 
 % Left column with facts about the person
 \newenvironment{facts}{%
@@ -97,6 +89,9 @@ Last Updated on \today
     \uppercase%
   }{}{0em}{}%
   % Control the text flow
+  \begin{tikzpicture}[remember picture,overlay]
+      \node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (1.5cm,1.5cm){};
+  \end{tikzpicture}
   \noindent%
   \begin{minipage}[t]{0.33\textwidth}%
 }{%
@@ -122,7 +117,7 @@ Last Updated on \today
   }{}{0em}{}%
   % Control the text flow
   \hfill%
-  \noindent\begin{minipage}[t]{0.66\textwidth}%
+  \noindent\begin{minipage}[t]{0.60\textwidth}%
 }{%
   \end{minipage}%
 }
