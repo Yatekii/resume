@@ -8,6 +8,8 @@
 \ProcessOptions\relax
 \LoadClass{article}
 
+\usepackage[export]{adjustbox}
+
 % Package Imports
 \usepackage[hmargin=1.25cm, vmargin=0.75cm]{geometry}
 \usepackage[hidelinks]{hyperref}
@@ -31,7 +33,7 @@
 % Date command
 \usepackage[absolute]{textpos}
 \usepackage[ngerman]{babel}
-\usepackage[UKenglish]{isodate}
+\usepackage[UKenglish,printdayoff,iso]{isodate}
 \setlength{\TPHorizModule}{1mm}
 \setlength{\TPVertModule}{1mm}
 \newcommand{\lastupdated}{\begin{textblock}{60}(155,5)
@@ -39,19 +41,9 @@
 Last Updated on \today
 \end{textblock}}
 
-% Name command
-\newcommand{\namesection}[3]{
-\centering{
-\fontsize{40pt}{60pt}
-\fontspec[Path = fonts/lato/]{Lato-Hairline}\selectfont #1
-\fontspec[Path = fonts/lato/]{Lato-Light}\selectfont #2
-} \\[5pt]
-\centering{
-\color{headings}
-\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{14pt}\selectfont #3}
-\noindent\makebox[\linewidth]{\color{headings}\rule{\paperwidth}{0.4pt}}
-\vspace{-15pt}
-}
+% Fix linebreaks in section headings
+\usepackage{polyglossia}
+\setmainlanguage{english}
 
 % Section seperators
 \usepackage{titlesec}
