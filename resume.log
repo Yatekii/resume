@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2016.5.31)  4 APR 2017 22:45
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2016.5.31)  4 APR 2017 23:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1065,14 +1065,14 @@ LaTeX Font Info:    ... okay on input line 16.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(21.33955pt, 571.61589pt, 21.33955pt)
+* h-part:(L,W,R)=(17.07182pt, 561.65724pt, 35.56593pt)
 * v-part:(T,H,B)=(21.33955pt, 752.29088pt, 21.33955pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=571.61589pt
+* \textwidth=561.65724pt
 * \textheight=752.29088pt
-* \oddsidemargin=-50.93044pt
-* \evensidemargin=-50.93044pt
+* \oddsidemargin=-55.19817pt
+* \evensidemargin=-55.19817pt
 * \topmargin=-87.93044pt
 * \headheight=12.0pt
 * \headsep=25.0pt
@@ -1246,7 +1246,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 180.
 Here is how much of TeX's memory you used:
  32662 strings out of 493706
  632356 string characters out of 6145769
- 682418 words of memory out of 10000000
+ 682427 words of memory out of 10000000
  35603 multiletter control sequences out of 15000+600000
  4168 words of font info for 36 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191

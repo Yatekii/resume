@@ -11,7 +11,7 @@
 \usepackage[export]{adjustbox}
 
 % Package Imports
-\usepackage[hmargin=0.75cm, vmargin=0.75cm]{geometry}
+\usepackage[vmargin=0.75cm, left=0.6cm, right=1.25cm]{geometry}
 \usepackage[hidelinks]{hyperref}
 
 % Color definitions
@@ -93,7 +93,7 @@
       \node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (1.5cm,1.5cm){};
   \end{tikzpicture}
   \noindent%
-  \begin{minipage}[t]{0.33\textwidth}%
+  \begin{minipage}[t]{0.28\textwidth}%
 }{%
   \end{minipage}%
 }
