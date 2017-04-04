@@ -45,19 +45,34 @@ Last Updated on \today
 \usepackage{polyglossia}
 \setmainlanguage{english}
 
-% Section seperators
+% General section commands
 \usepackage{titlesec}
 \titlespacing{\section}{0pt}{0pt}{0pt}
 \titlespacing{\subsection}{0pt}{0pt}{0pt}
+
+% Section separator command
 \newcommand{\sectionsep}{\vspace{8pt}}
 
-% Descriptors command
-\newcommand{\descript}[1]{
-\color{subheadings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
-
 % Location command
-\newcommand{\location}[1]{
-\color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
+\newcommand{\meta}[4]{
+  #1#2#3#4
+  % Description  
+  \color{subheadings}
+  \raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}
+  \fontsize{11pt}{13pt}\selectfont
+  #1 to #2
+  % Date
+  \color{headings}
+  \fontspec[Path = fonts/raleway/]{Raleway-Medium}
+  \fontsize{10pt}{12pt}\selectfont
+  #3 in
+  % Location
+  \color{subheadings}
+  \fontspec[Path = fonts/raleway/]{Raleway-Medium}
+  \fontsize{10pt}{12pt}\selectfont
+  #4
+  \normalfont
+}
 
 % Command to describe some fact
 \newcommand{\describe}[1]{
