@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2016.5.31)  4 APR 2017 23:04
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2016.5.31)  4 APR 2017 23:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -684,11 +684,8 @@ TextBlockOrigin set to 0pt x 0pt
 ) (/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2014/09/25 3.9l The Babel package
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/babel-german/ngerman.ldf
-Language: ngerman 2013/12/13 v2.7 German support for babel (new orthography)
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/babel-german/ngermanb.ldf
-Language: ngermanb 2013/12/13 v2.7 German support for babel (new orthography)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
 
 (/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2014/09/25 3.9l Babel common definitions
@@ -696,10 +693,10 @@ File: babel.def 2014/09/25 3.9l Babel common definitions
 \U@D=\dimen169
 
 (/usr/local/texlive/2015/texmf-dist/tex/generic/babel/xebabel.def))
-\l@naustrian = a dialect from \language\l@ngerman 
-\l@nswissgerman = a dialect from \language\l@ngerman 
-Package babel Info: Making " an active character on input line 88.
-)))
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/isodate/isodate.sty
 Package: isodate 2010/01/03 v2.30 Print dates with different formats (HH)
 
@@ -1065,11 +1062,11 @@ LaTeX Font Info:    ... okay on input line 16.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(17.07182pt, 561.65724pt, 35.56593pt)
+* h-part:(L,W,R)=(17.07182pt, 575.88362pt, 21.33955pt)
 * v-part:(T,H,B)=(21.33955pt, 752.29088pt, 21.33955pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=561.65724pt
+* \textwidth=575.88362pt
 * \textheight=752.29088pt
 * \oddsidemargin=-55.19817pt
 * \evensidemargin=-55.19817pt
@@ -1244,12 +1241,12 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 180.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 180.
  ) 
 Here is how much of TeX's memory you used:
- 32662 strings out of 493706
- 632356 string characters out of 6145769
- 682427 words of memory out of 10000000
- 35603 multiletter control sequences out of 15000+600000
+ 32607 strings out of 493706
+ 631488 string characters out of 6145769
+ 681156 words of memory out of 10000000
+ 35552 multiletter control sequences out of 15000+600000
  4168 words of font info for 36 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 62i,5n,104p,10494b,572s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,5n,104p,10494b,554s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on resume.pdf (1 page).

@@ -29,7 +29,7 @@
 
 % Date command
 \usepackage[absolute]{textpos}
-\usepackage[ngerman]{babel}
+\usepackage[english]{babel}
 \usepackage[UKenglish,printdayoff,iso]{isodate}
 
 % Fix linebreaks in section headings
@@ -47,7 +47,7 @@
 % Location command
 \newcommand{\meta}[4]{
   % Description  
-  \color{subheadings}
+  {\color{subheadings}
   \raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}
   \fontsize{11pt}{13pt}\selectfont
   #1
@@ -61,7 +61,7 @@
   \fontspec[Path = fonts/raleway/]{Raleway-Medium}
   \fontsize{10pt}{12pt}\selectfont
   #4\\
-  \normalfont
+  \normalfont}
 }
 
 % Command to describe some fact
