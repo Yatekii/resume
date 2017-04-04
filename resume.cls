@@ -59,17 +59,6 @@ Last Updated on \today
 \titlespacing{\subsection}{0pt}{0pt}{0pt}
 \newcommand{\sectionsep}{\vspace{8pt}}
 
-% Headings command
-\titleformat{\section}{\color{headings}
-\fontspec[Path = fonts/lato/]{Lato-Light}\fontsize{16pt}{24pt}\selectfont \raggedright\uppercase}{}{0em}{}
-
-% Subeadings command
-\titleformat{\subsection}{
-\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bold}\fontsize{12pt}{12pt}\selectfont\uppercase}{}{0em}{}
-
-\newcommand{\runsubsection}[1]{
-\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bold}\fontsize{12pt}{12pt}\selectfont\uppercase {#1} \normalfont}
-
 % Descriptors command
 \newcommand{\descript}[1]{
 \color{subheadings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
@@ -78,44 +67,57 @@ Last Updated on \today
 \newcommand{\location}[1]{
 \color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
 
-% Facts
-\usepackage{etoolbox}
-\newcounter{factcnt}
-\newcommand\entrylist{}
-
-\newcommand\setentry[2]{%
-  \csdef{entry#1}{#2}
+% Command to describe some fact
+\newcommand{\describe}[1]{
+  \textit{#1}
 }
 
-\newcommand\addentry[1]{%
-  \stepcounter{factcnt}%
-  \csdef{entry\thefactcnt}{#1}
+% Left column with facts about the person
+\newenvironment{facts}{%
+  % Define heading commands
+  % Section command
+  \titleformat{\section}{%
+    \color{headings}%
+    \fontspec[Path = fonts/lato/]{Lato-Light}%
+    \fontsize{16pt}{24pt}\selectfont%
+    \raggedright\uppercase%
+  }{}{0em}{}%
+  % Subsection command
+  \titleformat{\subsection}{%
+    \color{subheadings}%
+    \fontspec[Path = fonts/lato/]{Lato-Bold}%
+    \fontsize{12pt}{12pt}\selectfont%
+    \uppercase%
+  }{}{0em}{}%
+  % Control the text flow
+  \noindent%
+  \begin{minipage}[t]{0.33\textwidth}%
+}{%
+  \end{minipage}%
 }
 
-\newcommand\getentry[1]{%
-  \csuse{entry#1}
-}
-
-% Location command
-\newcommand{\fact}[2]{
-  \addentry{
-    \subsection{#1}
-    #2
-    \sectionsep
-  }
-}
-
-\newcounter{colnum}
-\newcommand\makefacts[0]{
-  \setcounter{colnum}{0}
-  \whileboolexpr{
-    test {
-      \ifnumcomp{\value{colnum}}{<}{\thefactcnt}
-    }
-  }{
-    \stepcounter{colnum}
-    \getentry{\thecolnum}
-  }
+% Right column with a timeline of projects and graduations
+\newenvironment{timeline}{%
+  % Define heading commands
+  % Headings command
+  \titleformat{\section}{%
+    \color{headings}%
+    \fontspec[Path = fonts/lato/]{Lato-Light}%
+    \fontsize{16pt}{24pt}\selectfont%
+    \raggedright\uppercase%
+  }{}{0em}{}%
+  % Subsection command
+  \titleformat{\subsection}{%
+    \color{subheadings}%
+    \fontspec[Path = fonts/lato/]{Lato-Bold}%
+    \fontsize{12pt}{12pt}\selectfont%
+    \uppercase%
+  }{}{0em}{}%
+  % Control the text flow
+  \hfill%
+  \noindent\begin{minipage}[t]{0.66\textwidth}%
+}{%
+  \end{minipage}%
 }
 
 % Bullet Lists with fewer gaps command
@@ -131,10 +133,7 @@ Last Updated on \today
 }
 
 \AtBeginDocument{
-  \noindent
-  \begin{minipage}[t]{0.33\textwidth}
 }
 
 \AtEndDocument{
-  \end{minipage}
 }

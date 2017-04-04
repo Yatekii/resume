@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Deedy - One Page Two Column Resume
+% One Page Two Column Resume
 % LaTeX Template
 % Version 1.2 (16/9/2014)
 %
@@ -12,47 +12,41 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[]{resume}
-\usepackage{fancyhdr}
 \usepackage[export]{adjustbox}
-
-\pagestyle{fancy}
-\fancyhf{}
-
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     PROFILE
+% P R O F I L E
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{facts}
 \section{Profile Of}
 \section{Noah Hüsser}
 %\LARGE\textit{Noah Hüsser}\normalsize
 \sectionsep
 %\includegraphics[valign=t, width=0.5\textwidth,left]{images/portrait_noah}
 
-\fact{Basics}{
-    Nationality: CH\\
-    Date of Birth: 12th January 1991
-}
+\subsection{Basics}
+Nationality: CH\\
+Date of Birth: 12th January 1991
+\sectionsep
 
-\fact{Contact}{
-    yatekii@yatekii.ch\\
-    +41 79 960 7130\\
-    \sectionsep
-    Eggenstrasse 3\\
-    5616 Meisterschwanden\\
-    Switzerland
-}
+\subsection{Contact}
+yatekii@yatekii.ch\\
++41 79 960 7130\\
+\sectionsep
+Eggenstrasse 3\\
+5616 Meisterschwanden\\
+Switzerland
+\sectionsep
 
-\fact{Activities}{
-    Ju Jitsu, Programming,\\
-    Electronics, Reading
-}
-
-\makefacts
+\subsection{Activities}
+Ju Jitsu, Programming,\\
+Electronics, Reading
+\sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     SKILLS
+% S K I L L S
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Skills}
@@ -67,12 +61,13 @@ Project Management
 \sectionsep
 
 \subsection{Languages}
-German \textit{mother tongue}\\
-English \textit{fluent}\\
-French  \textit{experienced}
+German \describe{mother tongue}\\
+English \describe{fluent}\\
+French  \describe{experienced}
 \sectionsep
 
 \section{Tools}
+
 \subsection{Engineering}
 Altium/KiCad\\
 Shell\\
@@ -82,13 +77,14 @@ Inventor
 \sectionsep
 
 \subsection{Programming}
-\textit{frequently used}\\
-Python, C, C++,\\
+\describe{frequently used}\\
+Python, C,\\
+VHDL, TCL,\\
 JavaScript, SQL, LaTeX
 \sectionsep
 
-\textit{used in the past}\\
-VHDL, Java, C\#, PHP, Bash
+\describe{used in the past}\\
+Java, C\#, PHP, C++, Bash
 \sectionsep
 
 \subsection{Miscellaneous}
@@ -97,15 +93,8 @@ Microsoft Office\\
 Photoshop / InDesign
 \sectionsep
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     COLUMN TWO
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.66\textwidth}
+\end{facts}
+\begin{timeline}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EDUCATION
@@ -113,17 +102,17 @@ Photoshop / InDesign
 
 \section{Education}
 
-\runsubsection{FHNW Brugg-Windisch}
+\subsection{FHNW Brugg-Windisch}
 \descript{BsC in EE and IT}
 \location{February 2016 – present | Brugg-Windisch, CH}
 \sectionsep
 
-\runsubsection{ETH Zürich}
+\subsection{ETH Zürich}
 \descript{BsC in Electrical Engineering and Information Technology}
 \location{September 2013 – February 2016 | Zürich, CH}
 \sectionsep
 
-\runsubsection{Alte Kantonsschule Aarau}
+\subsection{Alte Kantonsschule Aarau}
 \descript{Matura}
 \location{Graduated 2012 | Aarau, CH}
 \sectionsep
@@ -134,13 +123,13 @@ Photoshop / InDesign
 
 \section{Practical Experience}
 
-\runsubsection{ABB Micafil}
+\subsection{ABB Micafil}
 \descript{Intern Software Development }
 \location{July 2016 – present | Altstetten, CH}
 Development of various APIs and a CAD tool in VB/C\#.
 \sectionsep
 
-\runsubsection{Bastli}
+\subsection{Bastli}
 \descript{President }
 \location{February 2016 – October 2016 | Zürich, CH}
 \descript{Quaestor }
@@ -152,19 +141,19 @@ With Bastli we realize various, cool engineering projects. Most of the things we
 Impressions on what we do at \textit{www.bastli.ch}.
 \sectionsep
 
-\runsubsection{Nexus Telecom}
+\subsection{Nexus Telecom}
 \descript{Low Level C Programmer }
 \location{Mai 2014 – Mai 2015 | Zürich, CH}
-Diverse work on a C library with focus on porting it from 32 to 64 bit.
+Diverse work on their main C library with focus on porting it from 32 to 64 bit.
 \sectionsep
 
-\runsubsection{AFC AG - Air Flow Consulting}
+\subsection{AFC AG - Air Flow Consulting}
 \descript{Internship as a Programmer }
 \location{December 2012 – April 2013 | Zürich, CH}
 Creation of various tools in Python, C\# and VB, working as a one man team.
 \sectionsep
 
-\runsubsection{wapple.ch}
+\subsection{wapple.ch}
 \descript{Webdesigner and Co-Founder }
 \location{Janury 2007  – present | Zürich, CH}
 Webdesign for individuals, associations and companies in cooperation with a friend.
@@ -176,7 +165,7 @@ Webdesign for individuals, associations and companies in cooperation with a frie
 
 \section{Publications and Projects}
 
-\runsubsection{Design and Implementation of an FPGA Based Data Logging and Fault Recording System for PWM Rectifiers}
+\subsection{Design and Implementation of an FPGA Based Data Logging and Fault Recording System for PWM Rectifiers}
 \descript{Group Thesis at ETH Zürich }
 \location{September 2015  – December 2015 | Zürich, CH}
 \vspace{\topsep} % Hacky fix for awkward extra vertical space
@@ -187,13 +176,13 @@ Webdesign for individuals, associations and companies in cooperation with a frie
 \end{tightemize}
 \sectionsep
 
-\runsubsection{230V Switch}
+\subsection{230V Switch}
 \descript{Bluetooth Controlled Two Channel 230V Switch, Private Project}
 \location{November 2015  – present | Zürich, CH}
 Design of PCB and Software that feature dimming, master/slave, timer and bluetooth control of ordinary power outlets. Proof of concept works.
 \sectionsep
 
-\runsubsection{backdoor}
+\subsection{backdoor}
 \descript{Modular NFC Auth System, Private Project }
 \location{December 2014  – June 2015 | Zürich, CH}
 A system to manage access on devices such as the door to our backyard or a beer dispenser.
@@ -202,6 +191,5 @@ A system to manage access on devices such as the door to our backyard or a beer 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     PERSONAL ACHIEVEMENTS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
+\end{timeline}
 \end{document}
