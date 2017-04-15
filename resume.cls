@@ -53,7 +53,7 @@
   {\color{description}
   \raggedright\descriptionfont
   \fontsize{11pt}{13pt}\selectfont
-  #1 
+  #1, 
   % Date
   \color{date}
   \datefont
