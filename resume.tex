@@ -11,6 +11,31 @@
 
 \documentclass[]{resume}
 
+% Color definitions
+\definecolor{primary}{HTML}{2b2b2b}
+\definecolor{heading}{HTML}{E85D55}
+\definecolor{subheading}{HTML}{6A6A6A}
+\definecolor{subsubheading}{HTML}{333333}
+\definecolor{side}{HTML}{FFCD77}
+\definecolor{description}{HTML}{E85D55}
+\definecolor{date}{HTML}{E89491}
+\definecolor{location}{HTML}{E89491}
+
+\setmainfont[%
+  Color=primary,%
+  Path=fonts/lato/,%
+  BoldItalicFont=Lato-Italic,%
+  BoldFont=Lato-Regular,%
+  ItalicFont=Lato-LightItalic%
+]{Lato-Regular}
+\newfontfamily\headingfont[Path = fonts/lato/]{Lato-Bold}
+\newfontfamily\subheadingfont[Path = fonts/lato/]{Lato-Bold}
+\newfontfamily\subsubheadingfont[Path = fonts/lato/]{Lato-Light}
+\newfontfamily\sidefont[Path = fonts/lato/, ItalicFont=Lato-LightItalic]{Lato-Regular}
+\newfontfamily\descriptionfont[Path = fonts/raleway/]{Raleway-Medium}
+\newfontfamily\datefont[Path = fonts/raleway/]{Raleway-Medium}
+\newfontfamily\locationfont[Path = fonts/raleway/]{Raleway-Medium}
+
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -18,18 +43,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{facts}
-\section{Profile Of}
 \section{Noah Hüsser}
 %\LARGE\textit{Noah Hüsser}\normalsize
 \sectionsep
 %\includegraphics[valign=t, width=0.5\textwidth,left]{images/portrait_noah}
+\sectionsep
 
-\subsection{Basics}
-Nationality: CH\\
+Nationality: Swiss\\
 Date of Birth: 12th January 1991
 \sectionsep
 
-\subsection{Contact}
+\subsubsection{Contact}
 yatekii@yatekii.ch\\
 +41 79 960 7130\\
 \sectionsep
@@ -38,7 +62,7 @@ Eggenstrasse 3\\
 Switzerland
 \sectionsep
 
-\subsection{Activities}
+\subsubsection{Activities}
 Ju Jitsu, Programming,\\
 Electronics, Reading
 \sectionsep
@@ -47,9 +71,9 @@ Electronics, Reading
 % S K I L L S
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Skills}
+\subsection{Skills}
 
-\subsection{Professional}
+\subsubsection{Professional}
 Software Development\\
 Embedded Systems\\
 FPGA Programming\\
@@ -57,15 +81,15 @@ Electronical Prototyping\\
 Project Management
 \sectionsep
 
-\subsection{Languages}
+\subsubsection{Languages}
 German \describe{mother tongue}\\
 English \describe{fluent}\\
 French \describe{experienced}
 \sectionsep
 
-\section{Tools}
+\subsection{Tools}
 
-\subsection{Engineering}
+\subsubsection{Engineering}
 Altium/KiCad\\
 Shell\\
 Jupyter, Scipy, Numpy, Pandas\\
@@ -73,7 +97,7 @@ MATLAB\\
 Inventor
 \sectionsep
 
-\subsection{Programming}
+\subsubsection{Programming}
 \describe{frequently used}\\
 Python, C,\\
 VHDL, TCL,\\
@@ -84,7 +108,7 @@ JavaScript, SQL, LaTeX
 Java, C\#, PHP, C++, Bash
 \sectionsep
 
-\subsection{Miscellaneous}
+\subsubsection{Miscellaneous}
 Git/SVN\\
 Microsoft Office\\
 Photoshop / InDesign
@@ -97,17 +121,17 @@ Photoshop / InDesign
 %     EDUCATION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Education}
+\subsection{Education}
 
-\subsection{FHNW Brugg-Windisch}
+\subsubsection{FHNW Brugg-Windisch}
 \meta{BsC in Electrical Engineering and Information Technology\\}{Feb 2016}{present}{Brugg-Windisch, CH}
 \sectionsep
 
-\subsection{ETH Zürich}
+\subsubsection{ETH Zürich}
 \meta{BsC in Electrical Engineering and Information Technology\\}{Sep 2013}{Feb 2016}{Zürich, CH}
 \sectionsep
 
-\subsection{Alte Kantonsschule Aarau}
+\subsubsection{Alte Kantonsschule Aarau}
 \meta{Matura}{Graduated 2012}{}{Aarau, CH}
 \sectionsep
 
@@ -115,14 +139,14 @@ Photoshop / InDesign
 %     EXPERIENCE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Practical Experience}
+\subsection{Practical Experience}
 
-\subsection{ABB Micafil}
+\subsubsection{ABB Micafil}
 \meta{Intern Software Development}{Jul 2016}{present}{Altstetten, CH}
 Development of various APIs and a CAD tool in VB/C\#.
 \sectionsep
 
-\subsection{Bastli}
+\subsubsection{Bastli}
 \meta{President}{Feb 2016}{Oct 2016}{Zürich, CH}
 \meta{Active Member}{Sep 2013}{present}{Zürich, CH}
 Bastli is the student's electronics lab at ETH Zürich.
@@ -130,17 +154,17 @@ With Bastli we realize cool engineering projects. A lot of the things created ar
 Impressions on what we do at \textit{www.bastli.ch}.
 \sectionsep
 
-\subsection{Nexus Telecom}
+\subsubsection{Nexus Telecom}
 \meta{Low Level C Programmer}{Mai 2014}{Mai 2015}{Zürich, CH}
 Diverse work on their main C library with focus on porting it from 32 to 64 bit.
 \sectionsep
 
-\subsection{AFC AG - Air Flow Consulting}
+\subsubsection{AFC AG - Air Flow Consulting}
 \meta{Internship as a Programmer}{Dec 2012}{Apr 2013}{Zürich, CH}
 Creation of various tools in Python, C\# and VB, working as a one man team.
 \sectionsep
 
-\subsection{wapple.ch}
+\subsubsection{wapple.ch}
 \meta{Webdesigner and Co-Founder}{Jan 2007}{present}{Zürich, CH}
 Webdesign for individuals, associations and companies in cooperation with a friend.
 \sectionsep
@@ -149,9 +173,9 @@ Webdesign for individuals, associations and companies in cooperation with a frie
 %     PUBLICATIONS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Publications and Projects}
+\subsection{Publications and Projects}
 
-\subsection{Design and Implementation of an FPGA Based Data Logging and Fault Recording System for PWM Rectifiers}
+\subsubsection{Design and Implementation of an FPGA Based Data Logging and Fault Recording System for PWM Rectifiers}
 \meta{Group Thesis at ETH Zürich}{Sep 2015}{Dec 2015}{Zürich, CH}
 \vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightemize}
@@ -161,12 +185,12 @@ Webdesign for individuals, associations and companies in cooperation with a frie
 \end{tightemize}
 \sectionsep
 
-\subsection{230V Switch}
+\subsubsection{230V Switch}
 \meta{Bluetooth Controlled Two Channel 230V Switch, Private Project}{Nov 2015}{present}{Zürich, CH}
 Design of PCB and Software that feature dimming, master/slave, timer and bluetooth control of ordinary power outlets. Proof of concept works.
 \sectionsep
 
-\subsection{backdoor}
+\subsubsection{backdoor}
 \meta{NFC Auth System, Private Project}{Dec 2014}{Jun 2015}{Zürich, CH}
 A system to manage access on devices such as the door to our backyard or our beverage vending machine.
 \sectionsep

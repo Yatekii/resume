@@ -23,32 +23,11 @@
 \usepackage[vmargin=0.75cm, left=0.6cm, right=1.25cm]{geometry}
 \usepackage[hidelinks]{hyperref}
 
-% Color definitions
-\usepackage[usenames,dvipsnames]{xcolor}
-\definecolor{primary}{HTML}{2b2b2b}
-\definecolor{heading}{HTML}{6A6A6A}
-\definecolor{subheading}{HTML}{333333}
-\definecolor{side}{HTML}{FFCD77}
-\definecolor{description}{HTML}{E85D55}
-\definecolor{date}{HTML}{E89491}
-\definecolor{location}{HTML}{E89491}
-
 % Set main fonts
 \usepackage{fontspec}
-%\setmainfont[Color=primary, Path=fonts/FiraSans/]{FiraSans-Regular}
-\setmainfont[%
-  Color=primary,%
-  Path=fonts/lato/,%
-  BoldItalicFont=Lato-Italic,%
-  BoldFont=Lato-Regular,%
-  ItalicFont=Lato-LightItalic%
-]{Lato-Light}
-\newfontfamily\headingfont[Path = fonts/lato/]{Lato-Light}
-\newfontfamily\subheadingfont[Path = fonts/lato/]{Lato-Bold}
-\newfontfamily\sidefont{Inconsolata}
-\newfontfamily\descriptionfont[Path = fonts/raleway/]{Raleway-Medium}
-\newfontfamily\datefont[Path = fonts/raleway/]{Raleway-Medium}
-\newfontfamily\locationfont[Path = fonts/raleway/]{Raleway-Medium}
+
+% Colors
+\usepackage[usenames,dvipsnames]{xcolor}
 
 % Date command
 \usepackage[absolute]{textpos}
@@ -63,6 +42,7 @@
 \usepackage{titlesec}
 \titlespacing{\section}{0pt}{0pt}{0pt}
 \titlespacing{\subsection}{0pt}{0pt}{0pt}
+\titlespacing{\subsubsection}{0pt}{0pt}{0pt}
 
 % Section separator command
 \newcommand{\sectionsep}{\vspace{8pt}}
@@ -105,13 +85,20 @@
   \titleformat{\section}{%
     \color{heading}%
     \headingfont%
-    \fontsize{16pt}{24pt}\selectfont%
+    \fontsize{18pt}{24pt}\selectfont%
     \raggedright\uppercase%
   }{}{0em}{}%
   % Subsection command
   \titleformat{\subsection}{%
     \color{subheading}%
     \subheadingfont%
+    \fontsize{16pt}{24pt}\selectfont%
+    \raggedright\uppercase%
+  }{}{0em}{}%
+  % Subsubsection command
+  \titleformat{\subsubsection}{%
+    \color{subsubheading}%
+    \subsubheadingfont%
     \fontsize{12pt}{12pt}\selectfont%
     \uppercase%
   }{}{0em}{}%
@@ -140,12 +127,19 @@
   \titleformat{\subsection}{%
     \color{subheading}%
     \subheadingfont%
+    \fontsize{16pt}{24pt}\selectfont%
+    \uppercase%
+  }{}{0em}{}%
+  % Subsubsection command
+  \titleformat{\subsubsection}{%
+    \color{subsubheading}%
+    \subsubheadingfont%
     \fontsize{12pt}{12pt}\selectfont%
     \uppercase%
   }{}{0em}{}%
   % Control the text flow
   \hfill%
-  \noindent\begin{minipage}[t][0pt]{0.60\textwidth}%
+  \noindent\begin{minipage}[t]{0.60\textwidth}%
 }{%
   \end{minipage}%
 }
