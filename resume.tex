@@ -12,14 +12,14 @@
 \documentclass[]{resume}
 
 % Color definitions
-\definecolor{primary}{HTML}{2b2b2b}
-\definecolor{heading}{HTML}{E85D55}
+\definecolor{primary}{HTML}{000000}
+\definecolor{heading}{HTML}{C2271F}
 \definecolor{subheading}{HTML}{6A6A6A}
-\definecolor{subsubheading}{HTML}{333333}
+\definecolor{subsubheading}{HTML}{C2271F}
 \definecolor{side}{HTML}{FFCD77}
-\definecolor{description}{HTML}{E85D55}
-\definecolor{date}{HTML}{E89491}
-\definecolor{location}{HTML}{E89491}
+\definecolor{description}{HTML}{333333}
+\definecolor{date}{HTML}{333333}
+\definecolor{location}{HTML}{333333}
 
 \setmainfont[%
   Color=primary,%
@@ -32,9 +32,9 @@
 \newfontfamily\subheadingfont[Path = fonts/lato/]{Lato-Bold}
 \newfontfamily\subsubheadingfont[Path = fonts/lato/]{Lato-Regular}
 \newfontfamily\sidefont[Path = fonts/lato/, ItalicFont=Lato-LightItalic]{Lato-Light}
-\newfontfamily\descriptionfont[Path = fonts/raleway/]{Raleway-Regular}
-\newfontfamily\datefont[Path = fonts/raleway/]{Raleway-Regular}
-\newfontfamily\locationfont[Path = fonts/raleway/]{Raleway-Regular}
+\newfontfamily\descriptionfont[Path = fonts/lato/]{Lato-Regular}
+\newfontfamily\datefont[Path = fonts/lato/]{Lato-Regular}
+\newfontfamily\locationfont[Path = fonts/lato/]{Lato-Regular}
 
 % Normal text
 \newcommand{\mainsize}{\fontsize{10pt}{12pt}\selectfont}
@@ -49,8 +49,8 @@
 \newcommand{\descriptionsize}{\fontsize{10pt}{12pt}\selectfont}
 
 % Less important
-\newcommand{\datesize}{\fontsize{8pt}{9.6pt}\selectfont}
-\newcommand{\locationsize}{\fontsize{8pt}{9.6pt}\selectfont}
+\newcommand{\datesize}{\fontsize{10pt}{12pt}\selectfont}
+\newcommand{\locationsize}{\fontsize{10pt}{12pt}\selectfont}
 
 \begin{document}
 
@@ -78,9 +78,9 @@ Switzerland
 \sectionsep
 
 \subsubsection{Activities}
-Ju Jitsu, Programming,\\
-Electronics, Reading,\\
-Server Admin
+Programming, Electronics,\\
+Server Admin, Ju Jitsu,\\
+Reading
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -115,8 +115,7 @@ Autodesk Inventor
 
 \subsubsection{Programming}
 \describe{frequently used}\\
-Python, C,\\
-VHDL, TCL,\\
+Python, C, VHDL, TCL,\\
 JavaScript, SQL, LaTeX
 \sectionsep
 
@@ -127,7 +126,7 @@ Java, C\#, PHP, C++, Bash
 \subsubsection{Miscellaneous}
 Git/SVN\\
 Microsoft Office\\
-Photoshop / InDesign\\
+Photoshop, InDesign\\
 \\
 \\
 \\
@@ -206,7 +205,7 @@ Webdesign for individuals and companies in cooperation with a friend.
 
 \subsubsection{FPGA Based Oscilloscope}
 \meta{Group Thesis at ETH Zürich}{Sep 2015}{Dec 2015}{Zürich}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
+The tasks included but were not limited to the implementation of:
 \begin{tightemize}
 \item Recursive trigger logic to detect special signal patterns (VHDL)
 \item Kernel module for data reading and processing on an ARM Core A9 (C)
@@ -216,9 +215,8 @@ Webdesign for individuals and companies in cooperation with a friend.
 
 \subsubsection{230V Switch}
 \meta{Bluetooth Controlled Two Channel 230V Switch}{Nov 2015}{present}{Zürich}
-Design of a PCB and Software that feature dimming, master/slave, timer and bluetooth control of ordinary power outlets. A proof of concept is finished.
+Design of a PCB and Software that feature dimming, master/slave control, timing and bluetooth control of ordinary power outlets. A proof of concept is completed.
 \sectionsep
-
 \subsubsection{backdoor}
 \meta{NFC Auth System}{Dec 2014}{Jun 2015}{Zürich}
 A system to manage access on devices such as Bastli's door to the backyard or our beverage vending machine.

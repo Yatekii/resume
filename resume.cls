@@ -140,7 +140,7 @@
   }{}{0em}{}%
   % Control the text flow
   \hfill%
-  \noindent\begin{minipage}[t]{0.60\textwidth}%
+  \noindent\begin{minipage}[t]{0.62\textwidth}%
   \mainsize
 }{%
   \end{minipage}%
