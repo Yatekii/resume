@@ -27,14 +27,30 @@
   BoldItalicFont=Lato-Italic,%
   BoldFont=Lato-Regular,%
   ItalicFont=Lato-LightItalic%
-]{Lato-Regular}
+]{Lato-Light}
 \newfontfamily\headingfont[Path = fonts/lato/]{Lato-Bold}
 \newfontfamily\subheadingfont[Path = fonts/lato/]{Lato-Bold}
-\newfontfamily\subsubheadingfont[Path = fonts/lato/]{Lato-Light}
-\newfontfamily\sidefont[Path = fonts/lato/, ItalicFont=Lato-LightItalic]{Lato-Regular}
-\newfontfamily\descriptionfont[Path = fonts/raleway/]{Raleway-Medium}
-\newfontfamily\datefont[Path = fonts/raleway/]{Raleway-Medium}
-\newfontfamily\locationfont[Path = fonts/raleway/]{Raleway-Medium}
+\newfontfamily\subsubheadingfont[Path = fonts/lato/]{Lato-Regular}
+\newfontfamily\sidefont[Path = fonts/lato/, ItalicFont=Lato-LightItalic]{Lato-Light}
+\newfontfamily\descriptionfont[Path = fonts/raleway/]{Raleway-Regular}
+\newfontfamily\datefont[Path = fonts/raleway/]{Raleway-Regular}
+\newfontfamily\locationfont[Path = fonts/raleway/]{Raleway-Regular}
+
+% Normal text
+\newcommand{\mainsize}{\fontsize{10pt}{12pt}\selectfont}
+\newcommand{\sidesize}{\fontsize{10pt}{12pt}\selectfont}
+
+% Headings
+\newcommand{\headingsize}{\fontsize{18pt}{22pt}\selectfont}
+\newcommand{\subheadingsize}{\fontsize{14pt}{17pt}\selectfont}
+\newcommand{\subsubheadingsize}{\fontsize{11pt}{13.2pt}\selectfont}
+
+% Important
+\newcommand{\descriptionsize}{\fontsize{10pt}{12pt}\selectfont}
+
+% Less important
+\newcommand{\datesize}{\fontsize{8pt}{9.6pt}\selectfont}
+\newcommand{\locationsize}{\fontsize{8pt}{9.6pt}\selectfont}
 
 \begin{document}
 
@@ -44,7 +60,6 @@
 
 \begin{facts}
 \section{Noah Hüsser}
-%\LARGE\textit{Noah Hüsser}\normalsize
 \sectionsep
 %\includegraphics[valign=t, width=0.5\textwidth,left]{images/portrait_noah}
 \sectionsep
@@ -56,7 +71,7 @@ Date of Birth: 12th January 1991
 \subsubsection{Contact}
 yatekii@yatekii.ch\\
 +41 79 960 7130\\
-\sectionsep
+\\
 Eggenstrasse 3\\
 5616 Meisterschwanden\\
 Switzerland
@@ -64,7 +79,8 @@ Switzerland
 
 \subsubsection{Activities}
 Ju Jitsu, Programming,\\
-Electronics, Reading
+Electronics, Reading,\\
+Server Admin
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -91,10 +107,10 @@ French \describe{experienced}
 
 \subsubsection{Engineering}
 Altium/KiCad\\
-Shell\\
+Linux/Unix Administration\\
 Jupyter, Scipy, Numpy, Pandas\\
 MATLAB\\
-Inventor
+Autodesk Inventor
 \sectionsep
 
 \subsubsection{Programming}
@@ -111,8 +127,15 @@ Java, C\#, PHP, C++, Bash
 \subsubsection{Miscellaneous}
 Git/SVN\\
 Microsoft Office\\
-Photoshop / InDesign
-\sectionsep
+Photoshop / InDesign\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+Last updated \today.
 
 \end{facts}
 \begin{timeline}
@@ -124,7 +147,7 @@ Photoshop / InDesign
 \subsection{Education}
 
 \subsubsection{FHNW Brugg-Windisch}
-\meta{BsC in Electrical Engineering and Information Technology}{\\Feb 2016}{present}{Brugg-Windisch}
+\meta{BsC in Electrical Engineering and Information Technology}{\\Feb 2016}{present}{Windisch}
 \sectionsep
 
 \subsubsection{ETH Zürich}
@@ -142,7 +165,7 @@ Photoshop / InDesign
 \subsection{Practical Experience}
 
 \subsubsection{ABB Micafil}
-\meta{Intern Software Development}{Jul 2016}{present}{Altstetten}
+\meta{Intern Software Engineer}{Jul 2016}{present}{Altstetten}
 Development in VB.NET on a CAD tool to dimension bushings.
 Development of various tools in VB.NET, C\# and JS to smoothen the process from the design of a bushing to it's production.
 \sectionsep
@@ -151,7 +174,12 @@ Development of various tools in VB.NET, C\# and JS to smoothen the process from 
 \meta{President}{Feb 2016}{Oct 2016}{Zürich}
 \meta{Active Member}{Sep 2013}{present}{Zürich}
 Bastli is the student's electronics lab at ETH Zürich.
-With Bastli we realize cool engineering projects. A lot of the things created are assembled from parts salvaged from the Junkyard.
+With Bastli we realize cool engineering projects such as:
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item BIRD: An interactive LED dancefloor that is lit up when steping onto it. 
+\item SWARM 2: A collection of autonomous LED badges that can communicate over IR, react to sound and have capacitive touch input.
+\end{tightemize}
 Impressions on what we do at \textit{www.bastli.ch}.
 \sectionsep
 
@@ -160,14 +188,14 @@ Impressions on what we do at \textit{www.bastli.ch}.
 Diverse work on their main C library with focus on porting it from 32 to 64 bit.
 \sectionsep
 
-\subsubsection{AFC AG - Air Flow Consulting}
-\meta{Internship as a Programmer}{Dec 2012}{Apr 2013}{Zürich}
+\subsubsection{AFC AG}
+\meta{Internship Software Engineer}{Dec 2012}{Apr 2013}{Zürich}
 Creation of various tools in Python, C\# and VB, working as a one man team.
 \sectionsep
 
 \subsubsection{wapple.ch}
 \meta{Webdesigner and Co-Founder}{Jan 2007}{present}{Zürich}
-Webdesign for individuals, associations and companies in cooperation with a friend.
+Webdesign for individuals and companies in cooperation with a friend.
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -182,18 +210,18 @@ Webdesign for individuals, associations and companies in cooperation with a frie
 \begin{tightemize}
 \item Recursive trigger logic to detect special signal patterns (VHDL)
 \item Kernel module for data reading and processing on an ARM Core A9 (C)
-\item GUI to retrieve data over the network, filter and display it (C++, Python, Qt5)
+\item GUI to retrieve data over TCP/IP, filter and display it (C++, Python, Qt5)
 \end{tightemize}
 \sectionsep
 
 \subsubsection{230V Switch}
-\meta{Bluetooth Controlled Two Channel 230V Switch, Private Project}{Nov 2015}{present}{Zürich}
-Design of PCB and Software that feature dimming, master/slave, timer and bluetooth control of ordinary power outlets. Proof of concept works.
+\meta{Bluetooth Controlled Two Channel 230V Switch}{Nov 2015}{present}{Zürich}
+Design of a PCB and Software that feature dimming, master/slave, timer and bluetooth control of ordinary power outlets. A proof of concept is finished.
 \sectionsep
 
 \subsubsection{backdoor}
-\meta{NFC Auth System, Private Project}{Dec 2014}{Jun 2015}{Zürich}
-A system to manage access on devices such as the door to our backyard or our beverage vending machine.
+\meta{NFC Auth System}{Dec 2014}{Jun 2015}{Zürich}
+A system to manage access on devices such as Bastli's door to the backyard or our beverage vending machine.
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

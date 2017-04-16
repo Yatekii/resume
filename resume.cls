@@ -52,12 +52,12 @@
   % Description  
   {\color{description}
   \raggedright\descriptionfont
-  \fontsize{11pt}{13pt}\selectfont
+  \descriptionsize
   #1, 
   % Date
   \color{date}
   \datefont
-  \fontsize{10pt}{12pt}\selectfont
+  \datesize
   #2
   \def\temp{#3}\ifx\temp\empty
   \else
@@ -66,7 +66,7 @@
   % Location
   \color{location}
   \locationfont
-  \fontsize{10pt}{12pt}\selectfont
+  \locationsize
   in #4\\
   \normalfont}
 }
@@ -85,21 +85,21 @@
   \titleformat{\section}{%
     \color{heading}%
     \headingfont%
-    \fontsize{18pt}{24pt}\selectfont%
+    \headingsize%
     \raggedright\uppercase%
   }{}{0em}{}%
   % Subsection command
   \titleformat{\subsection}{%
     \color{subheading}%
     \subheadingfont%
-    \fontsize{16pt}{24pt}\selectfont%
+    \subheadingsize%
     \raggedright\uppercase%
   }{}{0em}{}%
   % Subsubsection command
   \titleformat{\subsubsection}{%
     \color{subsubheading}%
     \subsubheadingfont%
-    \fontsize{12pt}{12pt}\selectfont%
+    \subsubheadingsize%
     \uppercase%
   }{}{0em}{}%
   % Control the text flow
@@ -108,6 +108,7 @@
   \end{tikzpicture}
   \noindent%
   \begin{minipage}[t]{0.28\textwidth}%
+  \sidesize
   \sidefont\selectfont%
 }{%
   \end{minipage}%
@@ -120,26 +121,27 @@
   \titleformat{\section}{%
     \color{heading}%
     \headingfont%
-    \fontsize{16pt}{24pt}\selectfont%
+    \headingsize%
     \raggedright\uppercase%
   }{}{0em}{}%
   % Subsection command
   \titleformat{\subsection}{%
     \color{subheading}%
     \subheadingfont%
-    \fontsize{16pt}{24pt}\selectfont%
+    \subheadingsize%
     \uppercase%
   }{}{0em}{}%
   % Subsubsection command
   \titleformat{\subsubsection}{%
     \color{subsubheading}%
     \subsubheadingfont%
-    \fontsize{12pt}{12pt}\selectfont%
+    \subsubheadingsize%
     \uppercase%
   }{}{0em}{}%
   % Control the text flow
   \hfill%
   \noindent\begin{minipage}[t]{0.60\textwidth}%
+  \mainsize
 }{%
   \end{minipage}%
 }
