@@ -3,14 +3,14 @@
 %
 % Author:
 % Noah Huesser (yatekii@yatekii.ch)
-% Version 1.2 (2016-04-15)
+% Version 1.3 (2016-04-17)
 %
 % IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Intro Options
-\ProvidesClass{resume}[2017/04/03 CV class]
+\ProvidesClass{resume}[2017/04/17 CV class]
 \NeedsTeXFormat{LaTeX2e}
 \DeclareOption{print}{\def\@cv@print{}}
 \DeclareOption*{%
@@ -103,12 +103,12 @@
     \uppercase%
   }{}{0em}{}%
   % Control the text flow
-  \begin{tikzpicture}[remember picture,overlay]
-      \node [rectangle, fill=side, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (1.5cm,1.5cm){};
-  \end{tikzpicture}
+  \begin{tikzpicture}[remember picture,overlay]%
+      \node [rectangle, fill=side, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (1.5cm,1.5cm){};%
+  \end{tikzpicture}%
   \noindent%
-  \begin{minipage}[t][\textheight]{0.28\textwidth}%
-  \sidesize
+  \begin{minipage}[t][0.99\textheight]{0.28\textwidth}%
+  \sidesize%
   \sidefont\selectfont%
 }{%
   \end{minipage}%
@@ -140,8 +140,8 @@
   }{}{0em}{}%
   % Control the text flow
   \hfill%
-  \noindent\begin{minipage}[t][\textheight]{0.62\textwidth}%
-  \mainsize
+  \noindent\begin{minipage}[t][0.99\textheight]{0.62\textwidth}%
+  \mainsize%
 }{%
   \end{minipage}%
 }
