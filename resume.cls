@@ -107,7 +107,7 @@
       \node [rectangle, fill=side, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (1.5cm,1.5cm){};
   \end{tikzpicture}
   \noindent%
-  \begin{minipage}[t]{0.28\textwidth}%
+  \begin{minipage}[t][\textheight]{0.28\textwidth}%
   \sidesize
   \sidefont\selectfont%
 }{%
@@ -140,7 +140,7 @@
   }{}{0em}{}%
   % Control the text flow
   \hfill%
-  \noindent\begin{minipage}[t]{0.62\textwidth}%
+  \noindent\begin{minipage}[t][\textheight]{0.62\textwidth}%
   \mainsize
 }{%
   \end{minipage}%
