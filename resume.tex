@@ -11,11 +11,14 @@
 
 \documentclass[]{resume}
 
+\usepackage[export]{adjustbox}
+
 % Color definitions
 \definecolor{primary}{HTML}{000000}
 \definecolor{heading}{HTML}{C2271F}
 \definecolor{subheading}{HTML}{6A6A6A}
 \definecolor{subsubheading}{HTML}{C2271F}
+\definecolor{subsubheadingside}{HTML}{C2271F}
 \definecolor{side}{HTML}{FFCD77}
 \definecolor{description}{HTML}{333333}
 \definecolor{date}{HTML}{333333}
@@ -41,7 +44,7 @@
 \newcommand{\sidesize}{\fontsize{10pt}{12pt}\selectfont}
 
 % Headings
-\newcommand{\headingsize}{\fontsize{18pt}{22pt}\selectfont}
+\newcommand{\headingsize}{\fontsize{20pt}{22pt}\selectfont}
 \newcommand{\subheadingsize}{\fontsize{14pt}{17pt}\selectfont}
 \newcommand{\subsubheadingsize}{\fontsize{11pt}{13.2pt}\selectfont}
 
@@ -59,9 +62,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 \begin{facts}
-\section{Noah Hüsser}
+\adjustbox{valign=t}{\includegraphics[width=0.85\textwidth,trim={1.4cm 5.4cm 1.95cm 0.8cm},clip,cfbox=heading 0pt 0pt]{me2}}
 \sectionsep
-%\includegraphics[valign=t, width=0.5\textwidth,left]{images/portrait_noah}
+\section{Noah Hüsser}
 Nationality: Swiss\\
 Date of Birth: 12th January 1991
 \sectionsep
@@ -77,17 +80,13 @@ Switzerland
 
 \subsubsection{Activities}
 Programming, Electronics,\\
-Server Admin, Ju Jitsu,\\
-Reading
+Server Admin, Ju Jitsu
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % S K I L L S
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Skills}
-
-\subsubsection{Professional}
+\subsubsection{Professional Skills}
 Software Development\\
 Embedded Systems\\
 FPGA Programming\\
@@ -101,9 +100,7 @@ English \describe{fluent}\\
 French \describe{experienced}
 \sectionsep
 
-\subsection{Tools}
-
-\subsubsection{Engineering}
+\subsubsection{Engineering Tools}
 Altium/KiCad\\
 Linux/Unix Administration\\
 Jupyter, Scipy, Numpy, Pandas\\
@@ -118,13 +115,17 @@ JavaScript, SQL, LaTeX
 \sectionsep
 
 \describe{used in the past}\\
-Java, C\#, PHP, C++, Bash
+Java, C\#, PHP, C++, Bash, VB.NET
 \sectionsep
 
 \subsubsection{Miscellaneous}
 Git/SVN\\
 Microsoft Office\\
 Photoshop, InDesign
+\sectionsep
+
+\subsubsection{References}
+on request
 \vfill
 Last updated \today.
 
@@ -156,12 +157,12 @@ Last updated \today.
 \subsection{Practical Experience}
 
 \subsubsection{ABB Micafil}
-\meta{Intern Software Engineer}{Jul 2016}{present}{Altstetten}
-Development in VB.NET on a CAD tool to dimension bushings.
-Development of various tools in VB.NET, C\# and JS to smoothen the process from the design of a bushing to it's production.
+\meta{Software Engineer}{Jul 2016}{present}{Altstetten}
+Development of a CAD tool to dimension bushings in VB.NET.
+Development of a shopfloor application to monitor, analyze and control the production line of a bushing.
 \sectionsep
 
-\subsubsection{Bastli}
+\subsubsection{Bastli, ETH Zurich}
 \meta{President}{Feb 2016}{Oct 2016}{Zürich}
 \meta{Active Member}{Sep 2013}{present}{Zürich}
 Bastli is the student's electronics lab at ETH Zürich.
@@ -169,7 +170,7 @@ With Bastli we realize creative engineering projects such as:
 \vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightemize}
 \item BIRD: An interactive LED dancefloor that is lit up when steping onto it. 
-\item SWARM 2: A collection of autonomous LED badges that can communicate over IR, react to sound and have capacitive touch input.
+\item Swarm 2: A collection of autonomous LED badges that can communicate over IR, react to sound and have capacitive touch input.
 \end{tightemize}
 Impressions on what we do at \textit{www.bastli.ch}.
 \sectionsep
@@ -181,19 +182,30 @@ Diverse work on their main C library with focus on porting it from 32 to 64 bit.
 
 \subsubsection{AFC AG}
 \meta{Internship Software Engineer}{Dec 2012}{Apr 2013}{Zürich}
-Creation of various tools in Python, C\# and VB, working as a one man team.
+Engineering technology in the field of CFD simulations and clean room solutions.
+Development of various tools in Python, C\# and TCL to enhance CFD simulations.
 \sectionsep
 
-\subsubsection{wapple.ch}
-\meta{Webdesigner and Co-Founder}{Jan 2007}{present}{Zürich}
-Webdesign for individuals and companies in cooperation with a friend.
-\sectionsep
+% \subsubsection{wapple.ch}
+% \meta{Webdesigner and Co-Founder}{Jan 2007}{present}{Zürich}
+% Webdesign for individuals and companies in cooperation with a friend.
+% \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     PUBLICATIONS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Publications and Projects}
+
+\subsubsection{FPGA Based Spectrum Analyzer}
+\meta{Bachelor Thesis at FHNW}{Mar 2017}{Aug 2017}{Windisch}
+The tasks included but were not limited to the implementation of:
+\begin{tightemize}
+\item CIC/FIR-filter-chains for data decimation
+\item A server to transmit data via WebSockets on an embedded Linux
+\item A GUI to retrieve data over WebSockets, transform and display it (JavaScript)
+\end{tightemize}
+\sectionsep
 
 \subsubsection{FPGA Based Oscilloscope}
 \meta{Group Thesis at ETH Zürich}{Sep 2015}{Dec 2015}{Zürich}
@@ -205,10 +217,10 @@ The tasks included but were not limited to the implementation of:
 \end{tightemize}
 \sectionsep
 
-\subsubsection{230V Switch}
-\meta{Bluetooth Controlled Two Channel 230V Switch}{Nov 2015}{present}{Zürich}
-Design of a PCB and Software that feature dimming, master/slave control, timing and bluetooth control of ordinary power outlets. A proof of concept is completed.%
-\sectionsep
+% \subsubsection{230V Switch}
+% \meta{Bluetooth Controlled Two Channel 230V Switch}{Nov 2015}{present}{Zürich}
+% Design of a PCB and Software that feature dimming, master/slave control, timing and bluetooth control of ordinary power outlets. A proof of concept is completed.%
+% \sectionsep
 
 \subsubsection{backdoor}
 \meta{NFC Auth System}{Dec 2014}{Jun 2015}{Zürich}

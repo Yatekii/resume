@@ -97,7 +97,7 @@
   }{}{0em}{}%
   % Subsubsection command
   \titleformat{\subsubsection}{%
-    \color{subsubheading}%
+    \color{subsubheadingside}%
     \subsubheadingfont%
     \subsubheadingsize%
     \uppercase%
