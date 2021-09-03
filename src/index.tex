@@ -2,7 +2,15 @@
 % P R O F I L E
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{facts}
-    % \adjustbox{valign=t}{\includegraphics[width=0.85\textwidth,trim={1.4cm 5.4cm 1.95cm 0.8cm},clip,cfbox=heading 0pt 0pt]{me2}}
+    \adjustbox{valign=t}{
+    \begin{tikzpicture}[scale=0.85]
+        \filldraw[fill=imageborder] (0,0) circle (2.7cm);
+        \clip (0,0) circle (2.5cm);
+        \node[anchor=center] at (0, -0.15) {\includegraphics[width=4.5cm]{images/me}}; 
+        %adjust this coordinate to move image
+    \end{tikzpicture}
+    }
+    % \adjustbox{valign=t}{\includegraphics[width=0.85\textwidth,clip,cfbox=heading 0pt 0pt]{images/me}} % trim={1.4cm 5.4cm 1.95cm 0.8cm}
     \sectionsep
     \section{Noah Hüsser}
     Nationality: Swiss\\
@@ -79,11 +87,11 @@
     \subsection{Education}
     
     \subsubsection{FHNW Brugg-Windisch}
-    \meta{BsC in Electrical Engineering and Information Technology}{\\Feb 2016}{Jan 2017}{Windisch}
+    \meta{BsC in EE and IT}{Feb 2016}{Jan 2017}{Windisch}
     \sectionsep
     
     \subsubsection{ETH Zürich}
-    \meta{BsC in Electrical Engineering and Information Technology}{\\Sep 2013}{Feb 2016}{Zürich}
+    \meta{BsC in EE and IT}{Sep 2013}{Feb 2016}{Zürich}
     \sectionsep
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -92,8 +100,20 @@
     
     \subsection{Practical Experience}
     
+    \subsubsection{Technokrat}
+    \meta{Co-Founder, Software Engineer}{May 2017}{October 2021}{Schlieren}
+    Founded a consulting company, all things electrical enginnering with 3 colleagues.
+    Realizing Software from embedded devices to cloud services.
+    \sectionsep
+
+    \subsubsection{Siglis}
+    \meta{Co-Founder, Software Engineer}{August 2020}{August 2021}{Schlieren}
+    Founded a smart home company which develops a smart switch (\href{https://zigfred.ch}{zigfred.ch}).
+    Designing, developing and manufacturing a product from start to finish. Responsibilities included mechanical design, mobile app and automated factory testing and provisioning.
+    \sectionsep
+
     \subsubsection{ABB Micafil}
-    \meta{Part Time Software Engineer}{Jul 2016}{present}{Altstetten}
+    \meta{Part Time Software Engineer}{Jul 2016}{March 2018}{Altstetten}
     Development of a CAD tool to dimension bushings in VB.NET.
     Development of a shopfloor application to monitor, analyze and control the production line of a bushing.
     \sectionsep
@@ -107,7 +127,7 @@
     %     VOLUNTEER EXPERIENCE
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     
-    \subsection{Practical Experience}
+    \subsection{Volunteer Experience}
     
     \subsubsection{Ju Jitsu Club Aarau}
     \meta{Treasurer}{Apr 2019}{present}{Aarau}

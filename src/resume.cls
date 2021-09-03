@@ -3,7 +3,7 @@
 %
 % Author:
 % Noah Huesser (yatekii@yatekii.ch)
-% Version 1.3 (2016-04-17)
+% Version 1.4 (2021-09)
 %
 % IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
 %
@@ -45,7 +45,7 @@
 \titlespacing{\subsubsection}{0pt}{0pt}{0pt}
 
 % Section separator command
-\newcommand{\sectionsep}{\vspace{5pt plus 1fil}}
+\newcommand{\sectionsep}{\vspace{10pt}}
 
 % Meta command
 \newcommand{\meta}[4]{
