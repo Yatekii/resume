@@ -45,7 +45,7 @@
 \titlespacing{\subsubsection}{0pt}{0pt}{0pt}
 
 % Section separator command
-\newcommand{\sectionsep}{\vspace{10pt plus 1fil}}
+\newcommand{\sectionsep}{\vspace{5pt plus 1fil}}
 
 % Meta command
 \newcommand{\meta}[4]{
