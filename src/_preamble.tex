@@ -1,0 +1,58 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% One Page Two Column Resume
+%
+% Author:
+% Noah Huesser (yatekii@yatekii.ch)
+% Version 1.3 (2016-04-17)
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{resume}
+
+\usepackage[export]{adjustbox}
+
+% Color definitions
+\definecolor{primary}{HTML}{000000}
+\definecolor{heading}{HTML}{C2271F}
+\definecolor{subheading}{HTML}{6A6A6A}
+\definecolor{subsubheading}{HTML}{C2271F}
+\definecolor{subsubheadingside}{HTML}{C2271F}
+\definecolor{side}{HTML}{FFCD77}
+\definecolor{description}{HTML}{333333}
+\definecolor{date}{HTML}{333333}
+\definecolor{location}{HTML}{333333}
+
+\setmainfont[%
+  Color=primary,%
+  Path=fonts/lato/,%
+  BoldItalicFont=Lato-Italic,%
+  BoldFont=Lato-Regular,%
+  ItalicFont=Lato-LightItalic%
+]{Lato-Light}
+\newfontfamily\headingfont[Path = fonts/lato/]{Lato-Bold}
+\newfontfamily\subheadingfont[Path = fonts/lato/]{Lato-Bold}
+\newfontfamily\subsubheadingfont[Path = fonts/lato/]{Lato-Regular}
+\newfontfamily\sidefont[Path = fonts/lato/, ItalicFont=Lato-LightItalic]{Lato-Light}
+\newfontfamily\descriptionfont[Path = fonts/lato/]{Lato-Regular}
+\newfontfamily\datefont[Path = fonts/lato/]{Lato-Regular}
+\newfontfamily\locationfont[Path = fonts/lato/]{Lato-Regular}
+
+% Normal text
+\newcommand{\mainsize}{\fontsize{10pt}{12pt}\selectfont}
+\newcommand{\sidesize}{\fontsize{10pt}{12pt}\selectfont}
+
+% Headings
+\newcommand{\headingsize}{\fontsize{20pt}{22pt}\selectfont}
+\newcommand{\subheadingsize}{\fontsize{14pt}{17pt}\selectfont}
+\newcommand{\subsubheadingsize}{\fontsize{11pt}{13.2pt}\selectfont}
+
+% Important
+\newcommand{\descriptionsize}{\fontsize{10pt}{12pt}\selectfont}
+
+% Less important
+\newcommand{\datesize}{\fontsize{10pt}{12pt}\selectfont}
+\newcommand{\locationsize}{\fontsize{10pt}{12pt}\selectfont}
+
+\begin{document}%
