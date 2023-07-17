@@ -22,6 +22,14 @@
 % Package Imports
 \usepackage[vmargin=0.75cm, left=0.6cm, right=1.25cm]{geometry}
 \usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    }
+
+\urlstyle{same}
 
 % Set main fonts
 \usepackage{fontspec}
