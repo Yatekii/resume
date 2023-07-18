@@ -48,15 +48,43 @@
 
 % General section commands
 \usepackage{titlesec}
+\titleclass{\subsubsubsection}{straight}[\subsection]
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
 \titlespacing{\section}{0pt}{0pt}{0pt}
 \titlespacing{\subsection}{0pt}{0pt}{0pt}
 \titlespacing{\subsubsection}{0pt}{0pt}{0pt}
+\titlespacing{\subsubsubsection}{0pt}{0pt}{3pt}
 
 % Section separator command
 \newcommand{\sectionsep}{\vspace{10pt}}
 
 % Meta command
 \newcommand{\meta}[4]{
+  % Description  
+  {\color{description}
+  \raggedright\descriptionfont
+  \descriptionsize
+  #1, 
+  % Date
+  \color{date}
+  \datefont
+  \datesize
+  #2
+  \def\temp{#3}\ifx\temp\empty
+  \else
+    to #3 
+  \fi
+  % Location
+  \color{location}
+  \locationfont
+  \locationsize
+  in #4\\
+  \normalfont}
+}
+
+% Inline Meta command
+\newcommand{\metainline}[4]{
   % Description  
   {\color{description}
   \raggedright\descriptionfont
@@ -141,6 +169,12 @@
   }{}{0em}{}%
   % Subsubsection command
   \titleformat{\subsubsection}{%
+    \color{subsubheading}%
+    \subsubheadingfont%
+    \subsubheadingsize%
+    \uppercase%
+  }{}{0em}{}%
+  \titleformat{\subsubsubsection}[runin]{%
     \color{subsubheading}%
     \subsubheadingfont%
     \subsubheadingsize%
