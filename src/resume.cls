@@ -37,6 +37,9 @@
 % Colors
 \usepackage[usenames,dvipsnames]{xcolor}
 
+% Badges
+\usepackage[most]{tcolorbox}
+
 % Date command
 \usepackage[absolute]{textpos}
 \usepackage[english]{babel}
@@ -190,14 +193,34 @@
 
 % Bullet Lists with fewer gaps command
 \newenvironment{tightemize}{
-  \vspace{-\topsep}
+  % \vspace{-10pt}
   \begin{itemize}
-  \itemsep1pt
-  \parskip0pt
-  \parsep0pt
+    \itemsep-5pt
+    % \itemindent-10pt
+    % \listparindent1000pt
+    % \topsep-10pt
+  % \itemsep1pt
+  % \parskip0pt
+  % \parsep0pt
+  % \topsep0pt
 }{
   \end{itemize}
   \vspace{-\topsep}
+}
+
+\newtcbox{\badge}[1][heading]{
+  on line, 
+  arc=2pt,
+  colframe=#1,
+  fontupper=\color{#1},
+  boxrule=1pt, 
+  boxsep=0pt,
+  left=3pt,
+  right=3pt,
+  top=4pt,
+  bottom=4pt,
+  height=20pt,
+  size=small,
 }
 
 \AtBeginDocument{

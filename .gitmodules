@@ -1,0 +1,3 @@
+[submodule "cv.typ"]
+	path = src/cv.typ
+	url = https://github.com/jskherman/cv.typ
